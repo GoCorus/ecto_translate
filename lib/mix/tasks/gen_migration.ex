@@ -87,7 +87,7 @@ defmodule Mix.Tasks.EctoTranslate.Gen.Migration do
 
         create index :translations, [:translatable_id, :translatable_type]
         create index :translations, [:translatable_id, :translatable_type, :locale]
-        create unique_index(:translations, [:translatable_id, :translatable_type, :locale, :field])
+        create unique_index(:translations, [:translatable_id, :translatable_type, :locale, :field], name: :translations_uniq_idx)
     """
   end
 
