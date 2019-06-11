@@ -284,7 +284,13 @@ defmodule EctoTranslate do
     |> Enum.filter(fn {k, _v} -> Enum.member?(model.__struct__.translatable_fields, k) end)
     |> Enum.map(fn {field, content} ->
       params = Map.merge(params, %{field: Atom.to_string(field), content: content})
-      EctoTranslate.changeset(%EctoTranslate{}, params)
+      changeset = EctoTranslate.changeset(%EctoTranslate{}, params)
+      
+      if is_nil(content) || (is_binary(content) and String.length(content) == 0) do
+        force_change(changeset, :content, nil)
+      else
+        changeset
+      end
     end)
   end
 
