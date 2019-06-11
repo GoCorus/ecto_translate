@@ -214,7 +214,7 @@ defmodule EctoTranslate do
   @spec changeset(struct :: Ecto.Schema.t(), params :: map) :: Ecto.Changeset.t()
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, @required_fields)
+    |> cast(params, [:translatable_id, :translatable_type, :locale, :field, :content])
     |> validate_required(@required_fields)
     |> validate_locale
     |> unique_constraint(:translatable_id,
