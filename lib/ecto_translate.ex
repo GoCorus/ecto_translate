@@ -285,7 +285,7 @@ defmodule EctoTranslate do
     |> Enum.map(fn {field, content} ->
       params = Map.merge(params, %{field: Atom.to_string(field), content: content})
       changeset = EctoTranslate.changeset(%EctoTranslate{}, params)
-      
+
       if is_nil(content) || (is_binary(content) and String.length(content) == 0) do
         force_change(changeset, :content, nil)
       else
