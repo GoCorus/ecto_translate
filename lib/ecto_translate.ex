@@ -205,7 +205,7 @@ defmodule EctoTranslate do
   end
 
   @repo Application.get_env(:ecto_translate, :repo)
-  @required_fields ~w(translatable_id translatable_type locale field content)a
+  @required_fields ~w(translatable_id translatable_type locale field)a
 
   @doc """
   Builds a changeset based on the `struct` and `params` and validates the required fields and given locale
