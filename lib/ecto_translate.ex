@@ -218,7 +218,8 @@ defmodule EctoTranslate do
     |> validate_required(@required_fields)
     |> validate_locale
     |> unique_constraint(:translatable_id,
-      name: :translations_translatable_id_translatable_type_locale_field_ind
+      name: :translations_translatable_id_translatable_type_locale_field_ind,
+      message: "Field already exists"
     )
   end
 

@@ -32,7 +32,6 @@ defmodule EctoTranslate.Mixfile do
           :race_conditions
         ]
       ]
-
     ]
   end
 
