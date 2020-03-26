@@ -6,7 +6,7 @@ defmodule EctoTranslate.Mixfile do
       app: :ecto_translate,
       description:
         "EctoTranslate is a library that helps with translating Ecto data. EctoTranslate can help you with returning translated values of your Ecto data attributes. For this it uses a singe table called 'translations' which will contain polymorphic entries for all of your Ecto data stucts.",
-      version: "1.0.0",
+      version: "1.0.1",
       elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env()),
       build_embedded: Mix.env() == :prod,
@@ -68,7 +68,7 @@ defmodule EctoTranslate.Mixfile do
 
   defp package do
     [
-      maintainers: ["Gerard de Brieder"],
+      maintainers: ["Gerard de Brieder", "Mateusz Wojnarowski"],
       licenses: ["WTFPL"],
       files: ["lib", "mix.exs", "README*", "LICENSE*", "CHANGELOG*"],
       links: %{
