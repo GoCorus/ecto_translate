@@ -48,14 +48,14 @@ defmodule EctoTranslate.Mixfile do
   defp deps do
     [
       {:credo, ">= 0.0.0", only: [:dev, :test]},
-      {:dialyxir, ">= 1.0.0", only: [:dev], runtime: false},
+      {:dialyxir, ">= 0.0.0", only: [:dev], runtime: false},
       {:earmark, ">= 0.0.0", only: :dev},
-      {:ecto, ">= 3.0.0"},
-      {:ecto_sql, ">=3.0.5"},
+      {:ecto, ">= 0.0.0"},
+      {:ecto_sql, ">= 0.0.0"},
       {:ex_doc, ">= 0.0.0", only: :dev},
       {:excoveralls, ">= 0.0.0 ", only: :test},
-      {:gettext, ">= 0.16.1"},
-      {:postgrex, ">= 0.14.1", only: [:dev, :test]}
+      {:gettext, ">= 0.0.0"},
+      {:postgrex, ">= 0.0.0", only: [:dev, :test]}
     ]
   end
 
