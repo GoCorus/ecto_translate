@@ -39,7 +39,7 @@ defmodule EctoTranslate.Mixfile do
   defp elixirc_paths(_), do: ["lib"]
 
   def application do
-    [applications: applications(Mix.env())]
+    [applications: applications(Mix.env()), extra_applications: [:ecto]]
   end
 
   defp applications(:test), do: [:logger, :ecto_sql, :postgrex]
