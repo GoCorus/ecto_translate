@@ -53,7 +53,7 @@ defmodule EctoTranslate.Mixfile do
       {:credo, ">= 0.0.0", only: [:dev, :test]},
       {:dialyxir, ">= 0.0.0", only: [:dev], runtime: false},
       {:earmark, ">= 0.0.0", only: :dev},
-      {:ecto, ">= 0.0.0"},
+      {:ecto, ">= 3.6.0"},
       {:ecto_sql, ">= 0.0.0"},
       {:ex_doc, ">= 0.0.0", only: :dev},
       {:excoveralls, ">= 0.0.0 ", only: :test},
